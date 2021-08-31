@@ -1,0 +1,16 @@
+---
+title: "Examine Life Expectancy"
+author: "Libby Wahlenmayer"
+date: "8/31/2021"
+output: html_document
+---
+
+  # Abstract
+
+  Here, I re-examine the analysis of Oeppen and Vaupel (2002).
+
+  # Analysis
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
