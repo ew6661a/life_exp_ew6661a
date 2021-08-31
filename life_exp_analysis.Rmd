@@ -11,6 +11,21 @@ output: html_document
 
   # Analysis
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+install.packages("tidyverse")
+install.packages("gapminder")
+
+library(tidyverse)
+library(gapminder)
+data(gapminder_unfiltered)
+```
+
+```{r}
+gapminder_unfiltered %>%
+  group_by(year) %>%
+  filter(lifeExp ==max(lifeExp)) %>%
+  ungroup () %>%
+  select(year, country, lifeExp) %>%
+  arrange(year) ->
+  sumdat
 ```
